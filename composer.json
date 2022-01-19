@@ -1,0 +1,33 @@
+{
+    "name": "adlytodak/laravel-sso",
+    "description": "Simple PHP SSO integration for Laravel",
+    "keywords": ["laravel", "sso", "authentication", "login"],
+    "homepage": "https://github.com/adlytodak/laravel-sso",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Adly Todak",
+        "email": "adly@todak.com",
+        "homepage": "https://github.com/adlytodak",
+        "role": "Developer"
+      }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "guzzlehttp/guzzle": ">=6.3",
+        "laravel/framework": "^7.2",
+        "zefy/php-simple-sso": "^1.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "AdlyTodak\\LaravelSSO\\": "src/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+            "AdlyTodak\\LaravelSSO\\SSOServiceProvider"
+        ]
+      }
+    }
+}
