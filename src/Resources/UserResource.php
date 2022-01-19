@@ -14,11 +14,13 @@ class UserResource extends Resource
      */
     public function toArray($request)
     {
-        $fields = [];
-        foreach (config('laravel-sso.userFields') as $key => $value) {
-            $fields[$key] = $this->{$value};
-        }
-
-        return $fields;
+        // $fields = [];
+        // foreach (config('laravel-sso.userFields') as $key => $value) {
+        //     $fields[$key] = $this->{$value};
+        // }
+        return [
+            'data' => $this->collection
+        ];
+        // return $fields;
     }
 }
